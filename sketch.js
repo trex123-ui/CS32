@@ -3,6 +3,7 @@ const World= Matter.World;
 const Bodies = Matter.Bodies;
 const Constraint = Matter.Constraint;
 
+var getinfo
 var engine, world;
 var box1, pig1,pig3;
 var backgroundImg,platform;
@@ -99,7 +100,7 @@ function keyPressed(){
 }
 
 async function getBackgroundImg(){
-    var response = await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata");
+    var response = await fetch("http://worldtimeapi.org/api/timezone/America/New_York");
     var responseJSON = await response.json();
 
     var datetime = responseJSON.datetime;
